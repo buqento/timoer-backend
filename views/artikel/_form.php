@@ -22,6 +22,8 @@ use app\models\Kategori;
     
     <?= $form->field($model, 'deskripsi')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'konten_pertama')->textArea(['rows' => 3]) ?>
+
     <?= $form->field($model, 'foto')->fileInput() ?>
 
     <?= $form->field($model, 'konten')->textArea(['rows' => 10]) ?>

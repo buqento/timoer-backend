@@ -72,11 +72,13 @@ class ArtikelController extends Controller
             $model->judul = $post['judul'];
             $model->kategori_id = $post['kategori_id'];
             $model->deskripsi = $post['deskripsi'];
+            $model->konten_pertama = $post['konten_pertama'];
             $model->konten = $post['konten'];
             $model->foto = UploadedFile::getInstance($model, 'foto');
             $model->foto_file = $this->seoTitle($post['judul']).'.'.$model->foto->extension;
             $model->upload($this->seoTitle($post['judul']));
-            $model->foto = $this->generateBase64($model->foto_file);
+            // $model->foto = $this->generateBase64($model->foto_file);
+            $model->foto = 'jdfsf';
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }

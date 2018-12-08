@@ -35,6 +35,7 @@ class Artikel extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'judul' => 'Judul',
+            'konten_pertama' => '2 Paragraf Atas',
             'konten' => 'Konten',
             'kategori_id' => 'Kategori ID',
             'created_at' => 'Created At',
